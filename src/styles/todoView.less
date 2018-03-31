@@ -1,0 +1,37 @@
+.viewing .title,.viewing .project{
+	margin-bottom: 10px;
+}
+.viewing .title{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.viewing button{
+	width: calc(100% - 10px);
+
+}
+.viewing .project{
+	color: gray;
+}
+.viewing div:nth-of-type(3){
+	text-align: right;
+}
+
+@completeColor:green;
+.viewing button.completed{
+	border-color: @completeColor;
+}
+@pendingColor:red;
+.viewing button.pending{
+	border-color: @pendingColor;
+}
+
+/*swicthEdit*/
+.swicthEdit-enter {
+	opacity: 0;
+	/*transform: translateX(50px);*/
+}
+
+.swicthEdit-enter-active,
+{
+	transition: all 1s linear;
+}

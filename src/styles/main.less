@@ -1,0 +1,87 @@
+/*main.css*/
+
+p.statistic{
+	text-align: center;
+	padding: 10px;
+}
+
+ul{
+	@media screen and (max-width:900px){
+		width: 100%;
+		li{
+
+		}
+	}
+	width: 30%;
+	min-width: 350px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+ul li{
+	list-style: none;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+@borderColor:gray;
+
+input{
+	border: 1px solid @borderColor;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+label,input{
+	display: block;
+	box-sizing: border-box;
+	width: calc(100% - 20px);
+	margin: 10px auto;
+}
+
+button{
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	border: 1px solid lightblue;
+	background-color: #fff;
+}
+
+li img{
+
+	margin: 5px;
+}
+li img:first-of-type{
+	right: 25px;
+}
+li img:hover{
+	cursor: pointer;
+}
+
+li>div{
+	box-sizing: border-box;
+}
+
+#cover{
+	position: absolute;
+	width: 100%;
+	backGround-color: lightgray;
+	filter: opacity(0.3);
+	z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

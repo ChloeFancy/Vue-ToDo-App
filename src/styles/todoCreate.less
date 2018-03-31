@@ -1,0 +1,39 @@
+.create {
+	height: auto;
+	overflow: auto;
+
+	label{
+		text-align: center;
+	}
+	input{
+		margin-bottom: 15px;
+	}
+	button{
+		width: calc(45% - 10px);
+		float: left;
+	}
+	button:last-of-type{
+		float: right;
+	}
+}
+
+
+@normalColor:gray;
+@hoverColor:black;
+@Height:30px;
+#addNew{
+	line-height: @Height;
+	height: @Height;
+	width: @Height;
+	font-size: @Height*0.7;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid @normalColor;
+	color: @normalColor;
+	margin: 0 auto;
+}
+#addNew:hover{
+	cursor: pointer;
+	border-color: @hoverColor;
+	color: @hoverColor;
+}

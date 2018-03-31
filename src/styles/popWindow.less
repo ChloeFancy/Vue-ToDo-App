@@ -1,0 +1,110 @@
+.center-vh{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@borderWidth:3px;
+@alertBorderColor:lightblue;
+@successBorderColor:lightGreen;
+
+div.popWindow{
+	.center-vh;
+	position: fixed;
+	background-color: white;
+	z-index: 20;
+	width: 478px;
+	@media screen and (max-width:768px){
+		width: 80%;
+		font-size: 1rem;
+
+	}
+	padding: 15px 0;
+	border: 1px solid #000;
+	border-radius: 5px;
+
+	&.SuccessWindow{
+		border-color: @successBorderColor;
+		.circle{
+			border-color: @successBorderColor;
+		}
+	}
+
+	&.deleteWindow{
+		border-color: @alertBorderColor;
+		.circle{
+			border-color: @alertBorderColor;
+		}
+	}
+
+	header, footer, main{
+		text-align: center;
+	}
+	footer{
+		margin-top: 15px;
+	}
+	header{
+		padding: 10px;
+		font-weight: bold;
+		font-size: 2em;
+	}
+	button{
+		padding: 10px;
+	}
+}
+
+@circleWidth:60px;
+.circle{
+	border: @borderWidth solid @alertBorderColor;
+	border-radius: @circleWidth;
+	width: @circleWidth;
+	height: @circleWidth;
+	margin: 0 auto;
+	position: relative;
+	.gang{
+		border-right: @borderWidth solid @alertBorderColor;
+		height:25px;
+		width: 0;
+		margin: 10px auto;
+	}
+	.dot{
+		border: 1.5px solid @alertBorderColor;
+		border-radius: @borderWidth;
+		width: @borderWidth;
+		height: @borderWidth;
+		background-color: @alertBorderColor;
+		margin: 0 auto;
+	}
+	.check{
+		width: 0.3*@circleWidth;
+		height: 0.6*@circleWidth;
+		border-bottom: @borderWidth solid @successBorderColor;
+		border-right: @borderWidth solid @successBorderColor;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+}
+@keyframes pop{
+	from{
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	90%{
+		transform: translate(-50%, -50%) scale(1.2);
+	}
+
+	to{
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+.pop-enter-active{
+	animation: pop 0.3s ease-out;
+}
+.pop-leave-active{
+	animation: pop 0.3s reverse;
+}
